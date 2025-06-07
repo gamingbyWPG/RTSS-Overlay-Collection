@@ -1,0 +1,91 @@
+[Master]
+Implementation=2
+FontFace=Unispace
+FontHeight=-8
+FontWeight=700
+ZoomRatio=3
+[Settings]
+Name=
+EnvVars=
+RefreshPeriod=1000
+EmbeddedImage=
+PingAddr=
+[General]
+Sources=6
+Tables=0
+Layers=2
+[Source0]
+Name=GPU usage
+Units=%
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000030
+Gpu=00000000
+SrcName=
+[Source1]
+Name=VID usage
+Units=%
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000033
+Gpu=00000000
+SrcName=
+[Source2]
+Name=Memory usage
+Units=MB
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000031
+Gpu=00000000
+SrcName=
+[Source3]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000090
+Gpu=FFFFFFFF
+SrcName=
+[Source4]
+Name=RAM usage
+Units=MB
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000091
+Gpu=00000000
+SrcName=
+[Source5]
+Name=Framerate
+Units=FPS
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000050
+Gpu=FFFFFFFF
+SrcName=
+[Layer0]
+Name=
+VisibilitySource=Framerate
+Text=<FR> FPS
+PositionX=0
+PositionY=-1
+ExtentX=-2
+ExtentY=-1
+ExtentOrigin=3
+Size=75
+TextColor=BFFF8000
+[Layer1]
+Name=
+Text=wpg gaming
+PositionX=0
+PositionY=0
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=3
+Size=50
+TextColor=41FFAD5B
