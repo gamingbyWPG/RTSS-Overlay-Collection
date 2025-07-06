@@ -13,7 +13,7 @@ PingAddr=
 [General]
 Sources=6
 Tables=0
-Layers=11
+Layers=1
 [Source0]
 Name=GPU usage
 Units=%
@@ -70,115 +70,11 @@ Gpu=FFFFFFFF
 SrcName=
 [Layer0]
 Name=
-Text=
-PositionX=0
-PositionY=-1
-ExtentX=-57
-ExtentY=-1
-ExtentOrigin=0
-BgndColor=18FFFFFF
-[Layer1]
-Name=
-VisibilitySource=GPU usage
-Text=%GPU usage% %
-PositionX=-11
-PositionY=-1
-ExtentX=-3
-ExtentY=-1
-ExtentOrigin=3
-Size=75
-TextColor=C2FF8000
-[Layer2]
-Name=
-VisibilitySource=Memory usage
-Text=%Memory usage%MB
-PositionX=-20
-PositionY=-1
-ExtentX=-4
-ExtentY=-1
-ExtentOrigin=3
-Size=75
-TextColor=BFFF8000
-[Layer3]
-Name=
-VisibilitySource=CPU usage
-Text=%CPU usage%%
-PositionX=-47
-PositionY=-1
-ExtentX=-2
-ExtentY=-1
-ExtentOrigin=3
-Size=75
-TextColor=C5FF8000
-[Layer4]
-Name=
-VisibilitySource=RAM usage
-Text=%RAM usage%MB
-PositionX=-33
-PositionY=-1
-ExtentX=-5
-ExtentY=-1
-ExtentOrigin=3
-Size=75
-TextColor=BFFF8000
-[Layer5]
-Name=
 VisibilitySource=Framerate
 Text=<FR> FPS
-PositionX=-52
+PositionX=-2
 PositionY=-1
 ExtentX=-2
 ExtentY=-1
 ExtentOrigin=3
-Size=75
 TextColor=BFFF8000
-[Layer6]
-Name=
-Text=wpg gaming
-PositionX=-26
-PositionY=0
-ExtentX=-1
-ExtentY=-1
-ExtentOrigin=3
-Size=50
-TextColor=41FFAD5B
-[Layer7]
-Name=
-Text=intel uhd 620
-PositionX=-1
-PositionY=-1
-ExtentX=-1
-ExtentY=-1
-ExtentOrigin=3
-Size=75
-TextColor=82FF8000
-[Layer8]
-Name=
-Text=VRAM
-PositionX=-16
-PositionY=-1
-ExtentX=-3
-ExtentY=-1
-ExtentOrigin=3
-Size=75
-TextColor=7EFF8000
-[Layer9]
-Name=
-Text=16GB DDR4
-PositionX=-26
-PositionY=-1
-ExtentX=-1
-ExtentY=-1
-ExtentOrigin=3
-Size=75
-TextColor=82FF8000
-[Layer10]
-Name=
-Text=i3 8th gen
-PositionX=-39
-PositionY=-1
-ExtentX=-7
-ExtentY=-1
-ExtentOrigin=3
-Size=75
-TextColor=82FF8000

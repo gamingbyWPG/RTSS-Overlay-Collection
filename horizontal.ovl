@@ -1,0 +1,289 @@
+[Master]
+Implementation=2
+FontFace=Lato Semibold
+FontHeight=-8
+FontWeight=600
+ZoomRatio=2
+[Settings]
+Name=
+EnvVars=PM_ProcessId=1
+RefreshPeriod=1000
+EmbeddedImage=sample.png
+PingAddr=127.0.0.1
+[General]
+Sources=6
+Tables=1
+Layers=20
+[Source0]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage
+[Source1]
+Name=RAM usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage percent
+[Source2]
+Name=GPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 usage
+[Source3]
+Name=GPU1 memory usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage percent
+[Source4]
+Name=IsPresentmonFramerate
+Units=
+Format=
+Formula=(key(0x46) & 1) == 1
+Provider=HAL
+ID=Stub
+[Source5]
+Name=FrameratePresented
+Units=FPS
+Format=
+Formula=
+Provider=PresentMon
+ID=FrameratePresented
+[Table0]
+Name=SampleTable
+ValueSize=50
+Lines=2
+Line0Name=HDD1
+Line0Cells=3
+Line0Cell0Source=HDD1 usage
+Line0Cell1Source=HDD1 read rate
+Line0Cell2Source=HDD1 write rate
+Line1Name=NET1
+Line1Cells=3
+Line1Cell0Text=
+Line1Cell1Source=NET1 download rate
+Line1Cell2Source=NET1 upload rate
+[Layer0]
+Name=Rounded background
+Text=<B=0,0,R8>
+PositionX=0
+PositionY=0
+ExtentX=-55
+ExtentY=-2
+ExtentOrigin=0
+TextColor=D5404040
+[Layer1]
+Name=Framerate source
+Text=<IF IsPresentmonFramerate>PM<IF>
+PositionX=0
+PositionY=0
+ExtentX=-8
+ExtentY=-2
+ExtentOrigin=7
+Size=60
+TextColor=82FFFFFF
+MarginBottom=1
+[Layer2]
+Name=Framerate
+Text=<IF IsPresentmonFramerate>%FrameratePresented%<ELSE><FR><IF><S=-75> FPS<S>
+PositionX=0
+PositionY=0
+ExtentX=-8
+ExtentY=-2
+ExtentOrigin=4
+TextColor=FFFFFF
+[Layer3]
+Name=Separator
+Text=<B=1,0>
+PositionX=-8
+PositionY=0
+ExtentX=-1
+ExtentY=-2
+ExtentOrigin=3
+Size=50
+TextColor=303030
+[Layer4]
+Name=CPU usage
+Text=CPU %CPU usage%<S=-75>%<S>
+PositionX=-8
+PositionY=0
+ExtentX=-8
+ExtentY=-2
+ExtentOrigin=4
+TextColor=FFFFFF
+[Layer5]
+Name=CPU usage round bgnd
+Text=<I=0,0,256,384,128,128>
+PositionX=-16
+PositionY=0
+ExtentX=-4
+ExtentY=-2
+ExtentOrigin=0
+TextColor=80000000
+MarginLeft=2
+MarginTop=2
+MarginRight=2
+MarginBottom=2
+[Layer6]
+Name=CPU usage round
+Text=<AI=CPU usage,0,0,0,110,0,128,128,128,11,4,0.5>
+PositionX=-16
+PositionY=0
+ExtentX=-4
+ExtentY=-2
+ExtentOrigin=0
+TextColor=80C0
+MarginLeft=2
+MarginTop=2
+MarginRight=2
+MarginBottom=2
+[Layer7]
+Name=Separator
+Text=<B=1,0>
+PositionX=-20
+PositionY=0
+ExtentX=-1
+ExtentY=-2
+ExtentOrigin=3
+Size=50
+TextColor=303030
+[Layer8]
+Name=RAM usage
+Text=RAM %RAM usage percent%<S=-75>%<S>
+PositionX=-20
+PositionY=0
+ExtentX=-8
+ExtentY=-2
+ExtentOrigin=4
+TextColor=FFFFFF
+[Layer9]
+Name=RAM usage round bgnd
+Text=<I=0,0,256,384,128,128>
+PositionX=-28
+PositionY=0
+ExtentX=-4
+ExtentY=-2
+ExtentOrigin=0
+TextColor=80000000
+MarginLeft=2
+MarginTop=2
+MarginRight=2
+MarginBottom=2
+[Layer10]
+Name=RAM usage round
+Text=<AI=RAM usage percent,0,0,0,110,0,128,128,128,11,4,0.5,0,0>
+PositionX=-28
+PositionY=0
+ExtentX=-4
+ExtentY=-2
+ExtentOrigin=0
+TextColor=8080C0
+MarginLeft=2
+MarginTop=2
+MarginRight=2
+MarginBottom=2
+[Layer11]
+Name=Separator
+Text=<B=1,0>
+PositionX=-32
+PositionY=0
+ExtentX=-1
+ExtentY=-2
+ExtentOrigin=3
+Size=50
+TextColor=303030
+[Layer12]
+Name=GPU usage
+Text=GPU %GPU1 usage%<S=-75>%<S>
+PositionX=-32
+PositionY=0
+ExtentX=-8
+ExtentY=-2
+ExtentOrigin=4
+TextColor=FFFFFF
+[Layer13]
+Name=GPU usage round bgnd
+Text=<I=0,0,256,384,128,128>
+PositionX=-40
+PositionY=0
+ExtentX=-4
+ExtentY=-2
+ExtentOrigin=0
+TextColor=80000000
+MarginLeft=2
+MarginTop=2
+MarginRight=2
+MarginBottom=2
+[Layer14]
+Name=GPU usage round
+Text=<AI=GPU1 usage,0,0,0,110,0,128,128,128,11,4,0.5>
+PositionX=-40
+PositionY=0
+ExtentX=-4
+ExtentY=-2
+ExtentOrigin=0
+TextColor=8000
+MarginLeft=2
+MarginTop=2
+MarginRight=2
+MarginBottom=2
+[Layer15]
+Name=Separator
+Text=<B=1,0>
+PositionX=-44
+PositionY=0
+ExtentX=-1
+ExtentY=-2
+ExtentOrigin=3
+Size=50
+TextColor=303030
+[Layer16]
+Name=VRAM usage
+Text=MEM %GPU1 memory usage percent%<S=-75>%<S>
+PositionX=-44
+PositionY=0
+ExtentX=-7
+ExtentY=-2
+ExtentOrigin=4
+TextColor=FFFFFF
+[Layer17]
+Name=VRAM usage round bgnd
+Text=<I=0,0,256,384,128,128>
+PositionX=-51
+PositionY=0
+ExtentX=-4
+ExtentY=-2
+ExtentOrigin=0
+TextColor=80000000
+MarginLeft=2
+MarginTop=2
+MarginRight=2
+MarginBottom=2
+[Layer18]
+Name=VRAM usage round
+Text=<AI=GPU1 memory usage percent,0,0,0,110,0,128,128,128,11,4,0.5,0,0>
+PositionX=-51
+PositionY=0
+ExtentX=-4
+ExtentY=-2
+ExtentOrigin=0
+TextColor=8000
+MarginLeft=2
+MarginTop=2
+MarginRight=2
+MarginBottom=2
+[Layer19]
+Name=Cursor position placeholder
+Text=" \b"
+PositionX=0
+PositionY=-2
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0

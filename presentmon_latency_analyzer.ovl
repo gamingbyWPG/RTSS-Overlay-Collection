@@ -1,0 +1,371 @@
+[Master]
+Implementation=2
+FontFace=Tahoma
+FontHeight=-19
+FontWeight=400
+ZoomRatio=1
+[Settings]
+Name=
+EnvVars=PM_DisplayDelay=3000
+RefreshPeriod=500
+EmbeddedImage=
+PingAddr=
+[General]
+Sources=13
+Tables=0
+Layers=27
+[Source0]
+Name=IsPresentMonLatencyAvailable
+Units=
+Format=
+Formula=validate(DisplayLatency)
+Provider=HAL
+ID=Stub
+[Source1]
+Name=DisplayLatency
+Units=ms
+Format=%.1f
+Formula=(x > 0) ? x : buf(x,-1)
+Provider=PresentMon
+ID=DisplayLatency
+[Source2]
+Name=PresentMode
+Units=
+Format=
+Formula=
+Provider=PresentMon
+ID=PresentMode
+[Source3]
+Name=PresentMonCpuBusyLatency
+Units=ms
+Format=%.1f
+Formula=presentmonlatency(1,2)
+Provider=HAL
+ID=Stub
+[Source4]
+Name=PresentMonPresentLatency
+Units=ms
+Format=%.1f
+Formula=presentmonlatency(3,4)
+Provider=HAL
+ID=Stub
+[Source5]
+Name=PresentMonGpuRenderLatency
+Units=ms
+Format=%.1f
+Formula=presentmonlatency(5,6)
+Provider=HAL
+ID=Stub
+[Source6]
+Name=PresentMonGpuActiveLatency
+Units=ms
+Format=%.1f
+Formula=presentmonlatency(7,6)
+Provider=HAL
+ID=Stub
+[Source7]
+Name=PresentMonInputTimespan
+Units=
+Format=
+Formula=presentmontimespan(0,0,1000)
+Provider=HAL
+ID=Stub
+[Source8]
+Name=PresentMonCpuBusyTimespan
+Units=
+Format=
+Formula=presentmontimespan(1,2,1000)
+Provider=HAL
+ID=Stub
+[Source9]
+Name=PresentMonPresentTimespan
+Units=
+Format=
+Formula=presentmontimespan(3,4,1000)
+Provider=HAL
+ID=Stub
+[Source10]
+Name=PresentMonGpuRenderTimespan
+Units=
+Format=
+Formula=presentmontimespan(5,6,1000)
+Provider=HAL
+ID=Stub
+[Source11]
+Name=PresentMonGpuActiveTimespan
+Units=
+Format=
+Formula=presentmontimespan(7,6,1000)
+Provider=HAL
+ID=Stub
+[Source12]
+Name=PresentMonDisplayTimespan
+Units=
+Format=
+Formula=presentmontimespan(8,8,1000)
+Provider=HAL
+ID=Stub
+[Layer0]
+Name=Background
+Text=
+PositionX=0
+PositionY=0
+ExtentX=-64
+ExtentY=-16
+ExtentOrigin=0
+BgndColor=C2000000
+[Layer1]
+Name=RTSS header
+Text=<EXE> : <RES> <API> <ARCH>
+PositionX=0
+PositionY=0
+ExtentX=-64
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FFFFFF
+BgndColor=404040
+[Layer2]
+Name=RTSS frametime graph fill
+Text=<G=Frametime,0,0,1,0,50,1>
+PositionX=0
+PositionY=-1
+ExtentX=-64
+ExtentY=-8
+ExtentOrigin=0
+TextColor=80804040
+[Layer3]
+Name=RTSS frametime graph
+Text=<G=Frametime,0,0,1,0,50,0>
+PositionX=0
+PositionY=-1
+ExtentX=-64
+ExtentY=-8
+ExtentOrigin=0
+TextColor=FF8080
+[Layer4]
+Name=RTSS frametime caption
+Text=Frametime
+PositionX=0
+PositionY=-1
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8080
+[Layer5]
+Name=RTSS frametime
+Text=<FT> ms
+PositionX=-10
+PositionY=-1
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FF8080
+[Layer6]
+Name=RTSS framerate
+Text=<FR> fps
+PositionX=-48
+PositionY=-1
+ExtentX=-2
+ExtentY=-2
+ExtentOrigin=0
+Alignment=-8
+Size=200
+TextColor=FF8080
+[Layer7]
+Name=Display latency
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=PresentMon Display latency : %DisplayLatency% ms
+PositionX=0
+PositionY=-9
+ExtentX=-64
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FFFFFF
+BgndColor=404040
+[Layer8]
+Name=PresentMode
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=<SWITCH PresentMode><CASE 1>Hw : legacy flip<CASE 2>Hw : legacy copy<CASE 3>Hw : independent flip<CASE 4>Composed : flip<CASE 5>Composed : GPU copy<CASE 6>Composed : CPU copy<CASE 8>Hw composed : independent flip
+PositionX=0
+PositionY=-9
+ExtentX=-64
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FFFFFF
+[Layer9]
+Name=Input sample caption
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=Input
+PositionX=0
+PositionY=-10
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=C0C0C0
+[Layer10]
+Name=Input sample timespan
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=<G=PresentMonInputTimespan,0,0,1,0,1000,2000>
+PositionX=-19
+PositionY=-10
+ExtentX=-45
+ExtentY=-1
+ExtentOrigin=0
+TextColor=C0C0C0
+[Layer11]
+Name=CPU busy caption
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=CPU busy
+PositionX=0
+PositionY=-11
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FFF080
+[Layer12]
+Name=CPU busy latency
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=%PresentMonCpuBusyLatency% ms
+PositionX=-10
+PositionY=-11
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FFF080
+[Layer13]
+Name=CPU busy timespan
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=<G=PresentMonCpuBusyTimespan,0,0,1,0,1000,2000>
+PositionX=-19
+PositionY=-11
+ExtentX=-45
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FFF080
+[Layer14]
+Name=Present caption
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=Present
+PositionX=0
+PositionY=-12
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=80C8FF
+[Layer15]
+Name=Present latency
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=%PresentMonPresentLatency% ms
+PositionX=-10
+PositionY=-12
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=2
+TextColor=80C8FF
+[Layer16]
+Name=Present timespan
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=<G=PresentMonPresentTimespan,0,0,1,0,1000,2000>
+PositionX=-19
+PositionY=-12
+ExtentX=-45
+ExtentY=-1
+ExtentOrigin=0
+TextColor=80C8FF
+[Layer17]
+Name=GPU Rener caption
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=GPU Render
+PositionX=0
+PositionY=-13
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8080
+[Layer18]
+Name=GPU Render latency
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=%PresentMonGpuRenderLatency% ms
+PositionX=-10
+PositionY=-13
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FF8080
+[Layer19]
+Name=GPU Render timespan
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=<G=PresentMonGpuRenderTimespan,0,0,1,0,1000,2000>
+PositionX=-19
+PositionY=-13
+ExtentX=-45
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8080
+[Layer20]
+Name=GPU Active caption
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=GPU Active
+PositionX=0
+PositionY=-14
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF6060
+[Layer21]
+Name=GPU Active time
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=%PresentMonGpuActiveLatency% ms
+PositionX=-10
+PositionY=-14
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FF6060
+[Layer22]
+Name=GPU Active timespan
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=<G=PresentMonGpuActiveTimespan,0,0,1,0,1000,2000>
+PositionX=-19
+PositionY=-14
+ExtentX=-45
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF6060
+[Layer23]
+Name=Display caption
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=Display
+PositionX=0
+PositionY=-15
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF00FF
+[Layer24]
+Name=Display timespan
+VisibilitySource=IsPresentMonLatencyAvailable
+Text=<G=PresentMonDisplayTimespan,0,0,1,0,1000,2000>
+PositionX=-19
+PositionY=-15
+ExtentX=-45
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF00FF
+[Layer25]
+Name=PresentMon status
+Text=<IF !IsPresentMonLatencyAvailable>PresentMon latency data is not available...
+PositionX=-10
+PositionY=-12
+ExtentX=-44
+ExtentY=-2
+ExtentOrigin=4
+TextColor=FFFFFF
+[Layer26]
+Name=Cursor position placeholder
+Text=" \b"
+PositionX=0
+PositionY=-16
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0

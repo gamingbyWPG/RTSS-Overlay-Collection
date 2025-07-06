@@ -13,7 +13,7 @@ PingAddr=
 [General]
 Sources=6
 Tables=0
-Layers=2
+Layers=0
 [Source0]
 Name=GPU usage
 Units=%
@@ -68,24 +68,3 @@ Provider=MSI Afterburner
 SrcId=00000050
 Gpu=FFFFFFFF
 SrcName=
-[Layer0]
-Name=
-VisibilitySource=Framerate
-Text=<FR> FPS
-PositionX=0
-PositionY=-1
-ExtentX=-2
-ExtentY=-1
-ExtentOrigin=3
-Size=75
-TextColor=BFFF8000
-[Layer1]
-Name=
-Text=wpg gaming
-PositionX=0
-PositionY=0
-ExtentX=-1
-ExtentY=-1
-ExtentOrigin=3
-Size=50
-TextColor=41FFAD5B
